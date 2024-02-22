@@ -49,6 +49,13 @@ public class Light : MonoBehaviour
                 ColorChange();
             }
         }
+        if(num == 5)
+        {
+            if(Input.GetKeyDown(KeyCode.Space))
+            {
+                ColorChange();
+            }
+        }
         alfa -= Speed * Time.deltaTime;
     }
     void ColorChange()

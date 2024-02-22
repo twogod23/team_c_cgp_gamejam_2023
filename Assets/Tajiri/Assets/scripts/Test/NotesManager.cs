@@ -38,7 +38,7 @@ public class NotesManager : MonoBehaviour
     {
         NotesSpeed = GManager.instance.noteSpeed;
         noteNum = 0;
-        songName = "maou_short_14_shining_star";
+        songName = "kiminojuusei-normal";
         Load(songName);
     }
 
