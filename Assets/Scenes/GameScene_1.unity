@@ -648,7 +648,7 @@ MonoBehaviour:
   NotesTime: []
   NotesObj: []
   NotesSpeed: 8
-  noteObj: {fileID: 1962226539517612752, guid: fdf0d5236e375514fba5d688b8890987, type: 3}
+  noteObj: {fileID: 1659045140973200994, guid: 4e54d88c75f92ca42a40be377b903dca, type: 3}
 --- !u!1 &358647795
 GameObject:
   m_ObjectHideFlags: 0
