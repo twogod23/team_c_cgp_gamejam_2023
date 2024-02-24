@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
-public class Data
+public class Data1
 {
     public string name;
     public int maxBlock;
@@ -13,7 +13,7 @@ public class Data
 
 }
 [Serializable]
-public class Note
+public class Note1
 {
     public int type;
     public int num;
@@ -21,7 +21,7 @@ public class Note
     public int LPB;
 }
 
-public class NotesManager : MonoBehaviour
+public class Notesmanager : MonoBehaviour
 {
     public int noteNum;
     private string songName;
@@ -36,19 +36,18 @@ public class NotesManager : MonoBehaviour
 
     void OnEnable()
     {
-        NotesSpeed = GManager.instance.noteSpeed;
         noteNum = 0;
-        songName = "maou_short_14_shining_star";
+        songName = "kiminojuusei-normal";
         Load(songName);
     }
 
     private void Load(string SongName)
     {
         string inputString = Resources.Load<TextAsset>(SongName).ToString();
-        Data inputJson = JsonUtility.FromJson<Data>(inputString);
+        Data1 inputJson = JsonUtility.FromJson<Data1>(inputString);
 
         noteNum = inputJson.notes.Length;
-        GManager.instance.maxScore = noteNum * 5;//new!!
+        
 
         for (int i = 0; i < inputJson.notes.Length; i++)
         {
@@ -60,7 +59,24 @@ public class NotesManager : MonoBehaviour
             NoteType.Add(inputJson.notes[i].type);
 
             float z = NotesTime[i] * NotesSpeed;
-            NotesObj.Add(Instantiate(noteObj, new Vector3(inputJson.notes[i].block - 1.5f, 0.55f, z), Quaternion.identity));
+            float notePos = 0;
+            
+            if (inputJson.notes[i].block == 4)
+            {
+                notePos = 1.5f;
+            }
+            else
+            {
+                notePos = inputJson.notes[i].block;
+            }
+            GameObject instantiatedNote = Instantiate(noteObj, new Vector3(notePos - 1.5f, 0.55f, z), Quaternion.identity);
+
+            if (inputJson.notes[i].block == 4)
+            {
+                instantiatedNote.transform.localScale = new Vector3(4f, 0.01f, 0.3f);
+            }
+
+            NotesObj.Add(instantiatedNote);
         }
     }
 }
