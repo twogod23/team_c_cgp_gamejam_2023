@@ -59,7 +59,24 @@ public class NotesManager : MonoBehaviour
             NoteType.Add(inputJson.notes[i].type);
 
             float z = NotesTime[i] * NotesSpeed;
-            NotesObj.Add(Instantiate(noteObj, new Vector3(inputJson.notes[i].block - 1.5f, 0.55f, z), Quaternion.identity));
+            float notePos = 0;
+            
+            if (inputJson.notes[i].block == 4)
+            {
+                notePos = 1.5f;
+            }
+            else
+            {
+                notePos = inputJson.notes[i].block;
+            }
+            GameObject instantiatedNote = Instantiate(noteObj, new Vector3(notePos - 1.5f, 0.55f, z), Quaternion.identity);
+
+            if (inputJson.notes[i].block == 4)
+            {
+                instantiatedNote.transform.localScale = new Vector3(4f, 0.01f, 0.3f);
+            }
+
+            NotesObj.Add(instantiatedNote);
         }
     }
 }
