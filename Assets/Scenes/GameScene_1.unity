@@ -1617,7 +1617,7 @@ GameObject:
   - component: {fileID: 1258616575}
   - component: {fileID: 1258616574}
   m_Layer: 0
-  m_Name: Judge
+  m_Name: JudgeManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1807,6 +1807,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1551020531}
   m_CullTransparentMesh: 1
+--- !u!1 &1559795869
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1559795870}
+  m_Layer: 0
+  m_Name: MusicManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1559795870
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559795869}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3, y: 1, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1612688026
 GameObject:
   m_ObjectHideFlags: 0
@@ -2279,6 +2310,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1612688030}
     m_Modifications:
+    - target: {fileID: 1963963486964006252, guid: a5c59bbe139720c4da0fa3f41cffa3dc, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 5f8e8afe7b8b7ae408c21e8eea22a72f, type: 2}
+    - target: {fileID: 1963963486964006252, guid: a5c59bbe139720c4da0fa3f41cffa3dc, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 200314130673567541, guid: 5f8e8afe7b8b7ae408c21e8eea22a72f, type: 2}
+    - target: {fileID: 1963963486964006252, guid: a5c59bbe139720c4da0fa3f41cffa3dc, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4249949164723167615, guid: a5c59bbe139720c4da0fa3f41cffa3dc, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2394,3 +2437,4 @@ SceneRoots:
   - {fileID: 352295685}
   - {fileID: 1612688030}
   - {fileID: 1258616575}
+  - {fileID: 1559795870}
