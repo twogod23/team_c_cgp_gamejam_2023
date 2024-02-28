@@ -18,6 +18,9 @@ public class AnimateTitleStartText : MonoBehaviour
     //遷移先のシーンの指定
     [SerializeField] private string nextSceneName;
 
+    //設定ボタンの指定
+    [SerializeField] private GameObject optionButton;
+
     // Start is called before the first frame update
     void awake()
     {
@@ -53,6 +56,8 @@ public class AnimateTitleStartText : MonoBehaviour
     {
         //テキストの非表示
         informationTMP.enabled = false;
+        //設定ボタンの非表示
+        optionButton.SetActive(false);
 
         //ゲームシーンに移動
         SceneManager.LoadScene(nextSceneName);
