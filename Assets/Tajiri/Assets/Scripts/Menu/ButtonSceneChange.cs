@@ -5,11 +5,20 @@ using UnityEngine.UI;
 
 public class ButtonSceneChange : MonoBehaviour
 {
-    public string SceneName;
+    public string sceneName;
     public SceneChanger sceneChanger;
+    [SerializeField] [Header("エラーテキスト")] private string errormessage;
+    public ErrorText errorText;
     public void ButtonClick()
     {
-        sceneChanger.ChangeScene(SceneName);
+        if(!string.IsNullOrWhiteSpace(sceneName))
+        {
+            sceneChanger.ChangeScene(sceneName);
+        }
+        else
+        {
+            errorText.errorDisplay(errormessage);
+        }
     }
 }
 

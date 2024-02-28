@@ -12,21 +12,24 @@ public class MusicSelectButton : MonoBehaviour
     public Sprite newSprite;//新しい中身
     public string SongName;//曲名
     public MusicPlay musicPlay;//曲を流すスクリプトへアクセス
-    public GameObject targetObject;//オーディオソースオブジェクト
+    public GameObject AudioSourceObject;//オーディオソースオブジェクト
     AudioSource audioSource;
 
-    public PlayButton easyButton; //各難易度のボタンを更新するため
-    public PlayButton normalButton;
-    public PlayButton hardButton;
-
+    public diffButton easyButton; //各難易度のボタンを更新するため
+    public diffButton normalButton;
+    public diffButton hardButton;
+    public ButtonSceneChange buttonSceneChange;
+    public DiffButtonAnimation diffButtonAnimation;
 
 
     public void onClick()
     {
+        buttonSceneChange.sceneName = null;
         changeText();
         changeImage();
         changeMusic();
         changeDiffButtons();
+        diffButtonAnimation.diffAnimation();
     }
 
     void changeText()
@@ -49,12 +52,11 @@ public class MusicSelectButton : MonoBehaviour
     {
         if(musicPlay.nameSong != SongName)
         {
-            audioSource = targetObject.GetComponent<AudioSource>();
+            audioSource = AudioSourceObject.GetComponent<AudioSource>();
             audioSource.Stop();
             musicPlay.nameSong = SongName;
             musicPlay.PlayMusic();
         }
     }
-
 }
 
