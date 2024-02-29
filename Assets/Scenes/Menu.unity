@@ -1191,7 +1191,7 @@ MonoBehaviour:
   targetText: {fileID: 1592258324}
   newText: "\u30B7\u30E3\u30A4\u30CB\u30F3\u30B0\u30B9\u30BF\u30FC"
   targetImage: {fileID: 757963403}
-  newSprite: {fileID: 21300000, guid: f213171f903b0dd40afc7480f419e33a, type: 3}
+  newSprite: {fileID: 21300000, guid: f35e2d1b9f012614bbdf4583ae35e449, type: 3}
   SongName: maou_short_14_shining_star
   musicPlay: {fileID: 1133445550}
   AudioSourceObject: {fileID: 1598986856}
