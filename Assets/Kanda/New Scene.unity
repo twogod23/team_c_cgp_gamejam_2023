@@ -1295,8 +1295,8 @@ GameObject:
   - component: {fileID: 1640541591}
   - component: {fileID: 1640541590}
   - component: {fileID: 1640541589}
-  - component: {fileID: 1640541588}
   - component: {fileID: 1640541587}
+  - component: {fileID: 1640541593}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -1316,22 +1316,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3d15d96a2b60a44189b414288412294, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1640541588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1640541586}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 112fcab4a068cfe4cb12bfd2d817e5d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bgmSlider: {fileID: 1917519032}
-  seSlider: {fileID: 401231022}
-  bgmVolume: 0.5
-  seVolume: 0.4
 --- !u!65 &1640541589
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1418,6 +1402,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1640541593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640541586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59eabab8c01a3aa48b742e7192c4db54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgmSlider: {fileID: 1917519032}
+  seSlider: {fileID: 401231022}
+  bgmVolume: 0.8
+  seVolume: 0.8
 --- !u!1 &1648689091
 GameObject:
   m_ObjectHideFlags: 0
