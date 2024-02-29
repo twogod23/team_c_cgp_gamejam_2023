@@ -24,7 +24,7 @@ public class MusicSelectButton : MonoBehaviour
     public ImageSwitcher imageSwitcherNormal;
     public ImageSwitcher imageSwitcherHard;
 
-    [SerializeField] private PlayButton playButton;
+    [SerializeField] private Button playButton;
     [SerializeField] private VariableMemory variableMemory;
 
 
@@ -40,7 +40,7 @@ public class MusicSelectButton : MonoBehaviour
         imageSwitcherNormal.resetImage();
         imageSwitcherHard.resetImage();
         variableMemory.hasExecuted = false;
-        playButton.ImageReset(); 
+        //playButton.ImageReset(); 
     }
 
     void changeText()
