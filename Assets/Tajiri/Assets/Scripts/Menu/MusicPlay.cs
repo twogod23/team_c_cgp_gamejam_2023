@@ -7,11 +7,11 @@ public class MusicPlay : MonoBehaviour
     AudioSource audioSource;
     AudioClip audioClip;
     public string nameSong;
-    public GameObject audio;
+    public GameObject AudioSourceObject;
 
     public void PlayMusic()
     {
-        audioSource = audio.GetComponent<AudioSource>();
+        audioSource = AudioSourceObject.GetComponent<AudioSource>();
         audioClip = (AudioClip)Resources.Load("Musics/" + nameSong);//Musicsファイルを指定している。(Resources関係ない？)
         audioSource.PlayOneShot(audioClip);
     }
