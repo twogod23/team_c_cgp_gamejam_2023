@@ -4,5 +4,20 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 485e3ce1003898540b585d2996d39831
+  - enabled: 1
+    path: Assets/Tajiri/Assets/Scenes/maou_short_14_shining_star.unity
+    guid: a490ce311e399ae45a2ec9fe2e02d8bd
+  - enabled: 1
+    path: Assets/Tajiri/Assets/Scenes/maou_short_14_shining_star_Easy.unity
+    guid: c5416682d25920742a64b3b48807a1c5
+  - enabled: 1
+    path: Assets/Tajiri/Assets/Scenes/maou_short_14_shining_star_Hard.unity
+    guid: 3dd9b7c8d639dcb4d9f79b4059394c7d
+  - enabled: 1
+    path: Assets/Tajiri/Assets/Scenes/maou_short_14_shining_star_Normal.unity
+    guid: 7c472ba83ac76174a8262e6db86356ba
   m_configObjects: {}
