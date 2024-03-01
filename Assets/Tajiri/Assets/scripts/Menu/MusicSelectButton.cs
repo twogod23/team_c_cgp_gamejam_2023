@@ -19,13 +19,16 @@ public class MusicSelectButton : MonoBehaviour
     public diffButton normalButton;
     public diffButton hardButton;
     public ButtonSceneChange buttonSceneChange;
-    public DiffButtonAnimation diffButtonAnimation;
+    public DiffButtonAnimation diffButtonAnimation;//難易度ボタンのスライドアニメーション
+    public DiffButtonAnimation songNameAnimation;//曲名のアニメーション(流用)
+    public DiffButtonAnimation jacketAnimation;//ジャケットのアニメーション(流用)
     public ImageSwitcher imageSwitcherEasy;
     public ImageSwitcher imageSwitcherNormal;
     public ImageSwitcher imageSwitcherHard;
 
     [SerializeField] private PlayButton playButton;
     [SerializeField] private VariableMemory variableMemory;
+    [Header("ここから再生(サビ)")] public float startTime;
 
 
     public void onClick()
@@ -33,9 +36,9 @@ public class MusicSelectButton : MonoBehaviour
         buttonSceneChange.sceneName = null;
         changeText();
         changeImage();
+        musicPlay.startTime = startTime;
         changeMusic();
         changeDiffButtons();
-        diffButtonAnimation.diffAnimation();
         imageSwitcherEasy.resetImage();
         imageSwitcherNormal.resetImage();
         imageSwitcherHard.resetImage();
@@ -63,6 +66,9 @@ public class MusicSelectButton : MonoBehaviour
     {
         if(musicPlay.nameSong != SongName)
         {
+            diffButtonAnimation.diffAnimation();//アニメーションもセットで
+            songNameAnimation.diffAnimation();
+            jacketAnimation.diffAnimation();
             audioSource = AudioSourceObject.GetComponent<AudioSource>();
             audioSource.Stop();
             musicPlay.nameSong = SongName;
