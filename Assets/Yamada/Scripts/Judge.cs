@@ -1,21 +1,26 @@
 using System;
 using UnityEngine;
-using TMPro;//new!!
+using TMPro;
+using UnityEngine.SceneManagement;
 public class Judge : MonoBehaviour
 {
     //変数の宣言
     [SerializeField] private GameObject[] MessageObj;//プレイヤーに判定を伝えるゲームオブジェクト
     [SerializeField] NotesManager notesManager;//スクリプト「notesManager」を入れる変数
 
-    [SerializeField] TextMeshProUGUI comboText;//new!!
-    [SerializeField] TextMeshProUGUI scoreText;//new!!
+    [SerializeField] TextMeshProUGUI comboText;
+    [SerializeField] TextMeshProUGUI scoreText;
+    [SerializeField] GameObject finish;//new
 
     AudioSource audio;
     [SerializeField] AudioClip hitSound;
 
+    float endTime = 0;//new
+
     void Start()
     {
         audio = GetComponent<AudioSource>();
+        endTime = notesManager.NotesTime[notesManager.NotesTime.Count-1];//new
     }
     void Update()
     {
@@ -76,6 +81,13 @@ public class Judge : MonoBehaviour
                         Judgement(GetABS(Time.time - (notesManager.NotesTime[1] + GManager.instance.StartTime)), 1);
                     }
                 }
+            }
+
+            if (Time.time > endTime + GManager.instance.StartTime)
+            {
+                finish.SetActive(true);
+                //Invoke("ResultScene", 3f);動画の後半でコメントを外してください
+                return;
             }
 
             if (Time.time > notesManager.NotesTime[0] + 0.2f +GManager.instance.StartTime)//本来ノーツをたたくべき時間から0.2秒たっても入力がなかった場合
@@ -151,5 +163,10 @@ public class Judge : MonoBehaviour
     void message(int judge)//判定を表示する
     {
         Instantiate(MessageObj[judge],new Vector3(notesManager.LaneNum[0]-1.5f,0.76f,0.15f),Quaternion.Euler(45,0,0));
+    }
+
+    void ResultScene()
+    {
+        SceneManager.LoadScene("Result");
     }
 }
