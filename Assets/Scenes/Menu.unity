@@ -271,6 +271,8 @@ GameObject:
   - component: {fileID: 49142060}
   - component: {fileID: 49142059}
   - component: {fileID: 49142058}
+  - component: {fileID: 49142062}
+  - component: {fileID: 49142061}
   m_Layer: 5
   m_Name: HardButton
   m_TagString: Untagged
@@ -389,6 +391,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 49142061}
+        m_TargetAssemblyTypeName: DiffButtonAnimation, Assembly-CSharp
+        m_MethodName: diffAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &49142059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -427,6 +441,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 49142055}
   m_CullTransparentMesh: 1
+--- !u!114 &49142061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49142055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8e25a94cd08f0c449a948ff9b2f09c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diffButtons: {fileID: 49142055}
+  slideAnimation: {fileID: 49142062}
+  animationName: Buttonhopping
+--- !u!111 &49142062
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49142055}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 471540fe84913074da899605491efeef, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 471540fe84913074da899605491efeef, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &59835079
 GameObject:
   m_ObjectHideFlags: 0
@@ -613,6 +658,8 @@ GameObject:
   - component: {fileID: 201454700}
   - component: {fileID: 201454699}
   - component: {fileID: 201454698}
+  - component: {fileID: 201454701}
+  - component: {fileID: 201454702}
   m_Layer: 5
   m_Name: EasyButton
   m_TagString: Untagged
@@ -731,6 +778,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 201454702}
+        m_TargetAssemblyTypeName: DiffButtonAnimation, Assembly-CSharp
+        m_MethodName: diffAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &201454699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -769,6 +828,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 201454695}
   m_CullTransparentMesh: 1
+--- !u!111 &201454701
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201454695}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 471540fe84913074da899605491efeef, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 471540fe84913074da899605491efeef, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!114 &201454702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201454695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8e25a94cd08f0c449a948ff9b2f09c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diffButtons: {fileID: 201454695}
+  slideAnimation: {fileID: 201454701}
+  animationName: Buttonhopping
 --- !u!1 &463187805
 GameObject:
   m_ObjectHideFlags: 0
@@ -1648,6 +1738,8 @@ GameObject:
   - component: {fileID: 1026648188}
   - component: {fileID: 1026648187}
   - component: {fileID: 1026648186}
+  - component: {fileID: 1026648190}
+  - component: {fileID: 1026648189}
   m_Layer: 5
   m_Name: NormalButton
   m_TagString: Untagged
@@ -1766,6 +1858,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1026648190}
+        m_TargetAssemblyTypeName: DiffButtonAnimation, Assembly-CSharp
+        m_MethodName: diffAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1026648187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1804,6 +1908,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1026648183}
   m_CullTransparentMesh: 1
+--- !u!111 &1026648189
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026648183}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 471540fe84913074da899605491efeef, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 471540fe84913074da899605491efeef, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!114 &1026648190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026648183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8e25a94cd08f0c449a948ff9b2f09c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diffButtons: {fileID: 1026648183}
+  slideAnimation: {fileID: 1026648189}
+  animationName: Buttonhopping
 --- !u!1 &1076803358
 GameObject:
   m_ObjectHideFlags: 0
