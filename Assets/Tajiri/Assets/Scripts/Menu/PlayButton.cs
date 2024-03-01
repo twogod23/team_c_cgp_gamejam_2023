@@ -8,7 +8,10 @@ public class PlayButton : MonoBehaviour
     [SerializeField] private VariableMemory variableMemory;
     void Update()
     {
-        if(variableMemory.isDiffSelected && !variableMemory.hasExecuted)
+        if
+        (
+            variableMemory.isDiffSelected && !variableMemory.hasExecuted
+        )
         {
             ImageSwitch();
             variableMemory.hasExecuted = true;
