@@ -1774,7 +1774,7 @@ MonoBehaviour:
   - {fileID: 7739092095450327926, guid: 6e02a747b36b4824f831eff7b623a09e, type: 3}
   - {fileID: 3837238243691639639, guid: 43b849ddbaeff164dbc2fca5ecbb7e88, type: 3}
   - {fileID: 4990598234844133242, guid: a5c59bbe139720c4da0fa3f41cffa3dc, type: 3}
-  notesManager: {fileID: 352295684}
+  notesmanager: {fileID: 352295686}
   comboText: {fileID: 0}
   scoreText: {fileID: 0}
   finish: {fileID: 631593624}
