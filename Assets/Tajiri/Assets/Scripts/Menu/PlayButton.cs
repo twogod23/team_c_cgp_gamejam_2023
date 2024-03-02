@@ -5,12 +5,26 @@ using UnityEngine.UI;
 
 public class PlayButton : MonoBehaviour
 {
-    public string SceneName;
-    public string difficulty;
-    public SceneChanger sceneChanger;
-    
-    public void PlayButtonClick()
+    [SerializeField] private VariableMemory variableMemory;
+    void Update()
     {
-        sceneChanger.ChangeScene(SceneName + "_" + difficulty);
+        if(variableMemory.isDiffSelected && !variableMemory.hasExecuted)
+        {
+            ImageSwitch();
+            variableMemory.hasExecuted = true;
+        }
+    }
+
+    [SerializeField] private Image targetImage;
+    [SerializeField] private Sprite newSprite;
+    [SerializeField] private Sprite firstSprite;
+    public void ImageSwitch()//冗長
+    {
+        targetImage.sprite = newSprite;
+    }
+    public void ImageReset()
+    {
+        targetImage.sprite = firstSprite;
+        variableMemory.hasExecuted = false;
     }
 }

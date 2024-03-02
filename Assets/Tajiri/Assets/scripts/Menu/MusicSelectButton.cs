@@ -6,27 +6,41 @@ using TMPro;
 
 public class MusicSelectButton : MonoBehaviour
 {
-    public TextMeshProUGUI targetText;//テキストメッシュプロにはこれが必要
-    public string newText; //曲名を表示
-    public Image targetImage;//ターゲットとなる画像。これの中身を変える
-    public Sprite newSprite;//新しい中身
+    public TextMeshProUGUI targetText;
+    public string newText; //曲名
+    public Image targetImage;//画像
+    public Sprite newSprite;//新
     public string SongName;//曲名
-    public MusicPlay musicPlay;//曲を流すスクリプトへアクセス
-    public GameObject targetObject;//オーディオソースオブジェクト
+    public MusicPlay musicPlay;//曲saisei
+    public GameObject AudioSourceObject;//オーディオソースオブジェクト
     AudioSource audioSource;
 
-    public PlayButton easyButton; //各難易度のボタンを更新するため
-    public PlayButton normalButton;
-    public PlayButton hardButton;
+    public diffButton easyButton; //各難易度のボタンを更新するため
+    public diffButton normalButton;
+    public diffButton hardButton;
+    public ButtonSceneChange buttonSceneChange;
+    public DiffButtonAnimation diffButtonAnimation;
+    public ImageSwitcher imageSwitcherEasy;
+    public ImageSwitcher imageSwitcherNormal;
+    public ImageSwitcher imageSwitcherHard;
 
+    [SerializeField] private Button playButton;
+    [SerializeField] private VariableMemory variableMemory;
 
 
     public void onClick()
     {
+        buttonSceneChange.sceneName = null;
         changeText();
         changeImage();
         changeMusic();
         changeDiffButtons();
+        diffButtonAnimation.diffAnimation();
+        imageSwitcherEasy.resetImage();
+        imageSwitcherNormal.resetImage();
+        imageSwitcherHard.resetImage();
+        variableMemory.hasExecuted = false;
+        //playButton.ImageReset(); 
     }
 
     void changeText()
@@ -49,12 +63,11 @@ public class MusicSelectButton : MonoBehaviour
     {
         if(musicPlay.nameSong != SongName)
         {
-            audioSource = targetObject.GetComponent<AudioSource>();
+            audioSource = AudioSourceObject.GetComponent<AudioSource>();
             audioSource.Stop();
             musicPlay.nameSong = SongName;
             musicPlay.PlayMusic();
         }
     }
-
 }
 
