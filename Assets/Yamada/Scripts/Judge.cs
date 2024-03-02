@@ -156,8 +156,8 @@ public class Judge : MonoBehaviour
         notesmanager.NoteType.RemoveAt(numOffset);
         GManager.instance.score = (int)Math.Round(1000000 * Math.Floor(GManager.instance.ratioScore / GManager.instance.maxScore * 1000000) / 1000000);
         //↑new!!
-        comboText.text = GManager.instance.combo.ToString();//new!!
-        scoreText.text = GManager.instance.score.ToString();//new!!
+        //comboText.text = GManager.instance.combo.ToString();//new!!
+        //scoreText.text = GManager.instance.score.ToString();//new!!   
     }
 
     void message(int judge)//判定を表示する
