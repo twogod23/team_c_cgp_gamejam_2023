@@ -162,7 +162,17 @@ public class Judge : MonoBehaviour
 
     void message(int judge)//判定を表示する
     {
-        Instantiate(MessageObj[judge],new Vector3(notesmanager.LaneNum[0]-1.5f,0.76f,0.15f),Quaternion.Euler(45,0,0));
+        float pos;
+
+        if (notesmanager.LaneNum[0] == 4)
+        {
+            pos = 1.5f;
+        }
+        else
+        {
+            pos = notesmanager.LaneNum[0];
+        }
+        Instantiate(MessageObj[judge],new Vector3(pos-1.5f,0.76f,0.15f),Quaternion.Euler(45,0,0));
     }
 
     void ResultScene()
