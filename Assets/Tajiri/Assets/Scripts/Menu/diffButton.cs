@@ -7,9 +7,9 @@ public class diffButton : MonoBehaviour
 {
     public string SceneName;
     public string difficulty;
-    public ButtonSceneChange playButton;
+    public FadeOutLoader fadeOutLoader;
     public void changePlayButton()
     {
-        playButton.sceneName = SceneName + "_" + difficulty;
+        fadeOutLoader.sceneName = SceneName + "_" + difficulty;
     }
 }
