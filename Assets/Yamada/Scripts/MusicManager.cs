@@ -10,7 +10,7 @@ public class MusicManager : MonoBehaviour
     bool played;
     void Start()
     {
-        GManager.instance.Start = false;
+        GManager.Start = false;
         songName = "kiminojuusei_mixed";
         audio = GetComponent<AudioSource>();
         Music = (AudioClip)Resources.Load("Musics/" + songName);
@@ -20,10 +20,10 @@ public class MusicManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)&&!played)
+        if (Input.GetKeyDown(KeyCode.Return)&&!played)
         {
-            GManager.instance.Start = true;
-            GManager.instance.StartTime = Time.time;
+            GManager.Start = true;
+            GManager.StartTime = Time.time;
             played = true;
             audio.PlayOneShot(Music);
         }

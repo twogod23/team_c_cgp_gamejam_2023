@@ -6,22 +6,22 @@ public class GManager : MonoBehaviour
 {
     public static GManager instance = null;
 
-    public float maxScore;//new!!
-    public float ratioScore;//new!!
+    public static float maxScore = 0;//new!!
+    public static float ratioScore = 0;//new!!
 
-    public int songID;
-    public float noteSpeed;
+    public static int songID = 0;
+    public static float noteSpeed = 8.0f;
 
-    public bool Start;
-    public float StartTime;
+    public static bool Start = true;
+    public static float StartTime = 0f;
 
-    public int combo;
-    public int score;
+    public static int combo = 0;
+    public static int score = 0;
 
-    public int perfect;
-    public int great;
-    public int bad;
-    public int miss;
+    public static int perfect = 0;
+    public static int great = 0;
+    public static int bad = 0;
+    public static int miss = 0;
     public void Awake()
     {
         if (instance == null)

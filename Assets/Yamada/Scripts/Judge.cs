@@ -24,19 +24,19 @@ public class Judge : MonoBehaviour
     }
     void Update()
     {
-        if (GManager.instance.Start)
+        if (GManager.Start)
         {
             if (Input.GetKeyDown(KeyCode.D))//〇キーが押されたとき
             {
                 if (notesmanager.LaneNum[0] == 0)//押されたボタンはレーンの番号とあっているか？
                 {
-                    Judgement(GetABS(Time.time - (notesmanager.NotesTime[0] + GManager.instance.StartTime)), 0);
+                    Judgement(GetABS(Time.time - (notesmanager.NotesTime[0] + GManager.StartTime)), 0);
                 }
                 else
                 {
                     if (notesmanager.LaneNum[1] == 0)
                     {
-                        Judgement(GetABS(Time.time - (notesmanager.NotesTime[1] + GManager.instance.StartTime)), 1);
+                        Judgement(GetABS(Time.time - (notesmanager.NotesTime[1] + GManager.StartTime)), 1);
                     }
                 }
             }
@@ -44,13 +44,13 @@ public class Judge : MonoBehaviour
             {
                 if (notesmanager.LaneNum[0] == 1)
                 {
-                    Judgement(GetABS(Time.time - (notesmanager.NotesTime[0] + GManager.instance.StartTime)),0);
+                    Judgement(GetABS(Time.time - (notesmanager.NotesTime[0] + GManager.StartTime)),0);
                 }
                 else
                 {
                     if (notesmanager.LaneNum[1] == 1)
                     {
-                        Judgement(GetABS(Time.time - (notesmanager.NotesTime[1] + GManager.instance.StartTime)), 1);
+                        Judgement(GetABS(Time.time - (notesmanager.NotesTime[1] + GManager.StartTime)), 1);
                     }
                 }
             }
@@ -58,13 +58,13 @@ public class Judge : MonoBehaviour
             {
                 if (notesmanager.LaneNum[0] == 2)
                 {
-                    Judgement(GetABS(Time.time - (notesmanager.NotesTime[0] + GManager.instance.StartTime)),0);
+                    Judgement(GetABS(Time.time - (notesmanager.NotesTime[0] + GManager.StartTime)),0);
                 }
                 else
                 {
                     if (notesmanager.LaneNum[1] == 2)
                     {
-                        Judgement(GetABS(Time.time - (notesmanager.NotesTime[1] + GManager.instance.StartTime)), 1);
+                        Judgement(GetABS(Time.time - (notesmanager.NotesTime[1] + GManager.StartTime)), 1);
                     }
                 }
             }
@@ -72,31 +72,31 @@ public class Judge : MonoBehaviour
             {
                 if (notesmanager.LaneNum[0] == 3)
                 {
-                    Judgement(GetABS(Time.time - (notesmanager.NotesTime[0] + GManager.instance.StartTime)),0);
+                    Judgement(GetABS(Time.time - (notesmanager.NotesTime[0] + GManager.StartTime)),0);
                 }
                 else
                 {
                     if (notesmanager.LaneNum[1] == 3)
                     {
-                        Judgement(GetABS(Time.time - (notesmanager.NotesTime[1] + GManager.instance.StartTime)), 1);
+                        Judgement(GetABS(Time.time - (notesmanager.NotesTime[1] + GManager.StartTime)), 1);
                     }
                 }
             }
 
-            if (Time.time > endTime + GManager.instance.StartTime)
+            if (Time.time > endTime + GManager.StartTime)
             {
                 finish.SetActive(true);
                 //Invoke("ResultScene", 3f);動画の後半でコメントを外してください
                 return;
             }
 
-            if (Time.time > notesmanager.NotesTime[0] + 0.2f +GManager.instance.StartTime)//本来ノーツをたたくべき時間から0.2秒たっても入力がなかった場合
+            if (Time.time > notesmanager.NotesTime[0] + 0.2f +GManager.StartTime)//本来ノーツをたたくべき時間から0.2秒たっても入力がなかった場合
             {
                 message(3);
                 deleteData(0);
                 Debug.Log("Miss");
-                GManager.instance.miss++;
-                GManager.instance.combo = 0;
+                GManager.miss++;
+                GManager.combo = 0;
                 //ミス
             }
         }
@@ -108,9 +108,9 @@ public class Judge : MonoBehaviour
         {
             Debug.Log("Perfect");
             message(0);
-            GManager.instance.ratioScore += 5;//new!!
-            GManager.instance.perfect++;
-            GManager.instance.combo++;
+            GManager.ratioScore += 5;//new!!
+            GManager.perfect++;
+            GManager.combo++;
             deleteData(numOffset);
         }
         else
@@ -119,9 +119,9 @@ public class Judge : MonoBehaviour
             {
                 Debug.Log("Great");
                 message(1);
-                GManager.instance.ratioScore += 3;//new!!
-                GManager.instance.great++;
-                GManager.instance.combo++;
+                GManager.ratioScore += 3;//new!!
+                GManager.great++;
+                GManager.combo++;
                 deleteData(numOffset);
             }
             else
@@ -130,9 +130,9 @@ public class Judge : MonoBehaviour
                 {
                     Debug.Log("Bad");
                     message(2);
-                    GManager.instance.ratioScore += 1;//new!!
-                    GManager.instance.bad++;
-                    GManager.instance.combo = 0;
+                    GManager.ratioScore += 1;//new!!
+                    GManager.bad++;
+                    GManager.combo = 0;
                     deleteData(numOffset);
                 }
             }
@@ -154,10 +154,10 @@ public class Judge : MonoBehaviour
         notesmanager.NotesTime.RemoveAt(numOffset);
         notesmanager.LaneNum.RemoveAt(numOffset);
         notesmanager.NoteType.RemoveAt(numOffset);
-        GManager.instance.score = (int)Math.Round(1000000 * Math.Floor(GManager.instance.ratioScore / GManager.instance.maxScore * 1000000) / 1000000);
+        GManager.score = (int)Math.Round(1000000 * Math.Floor(GManager.ratioScore / GManager.maxScore * 1000000) / 1000000);
         //↑new!!
-        //comboText.text = GManager.instance.combo.ToString();//new!!
-        //scoreText.text = GManager.instance.score.ToString();//new!!   
+        //comboText.text = GManager.combo.ToString();//new!!
+        //scoreText.text = GManager.score.ToString();//new!!   
     }
 
     void message(int judge)//判定を表示する

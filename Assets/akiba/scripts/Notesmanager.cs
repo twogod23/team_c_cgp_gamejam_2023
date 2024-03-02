@@ -9,11 +9,11 @@ public class Data1
     public int maxBlock;
     public int BPM;
     public int offset;
-    public Note[] notes;
+    public Notes[] notes;
 
 }
 [Serializable]
-public class Note1
+public class Notes
 {
     public int type;
     public int num;
@@ -47,7 +47,7 @@ public class Notesmanager : MonoBehaviour
         Data1 inputJson = JsonUtility.FromJson<Data1>(inputString);
 
         noteNum = inputJson.notes.Length;
-        GManager.instance.maxScore = noteNum * 5;//new
+        GManager.maxScore = noteNum * 5;//new
 
         for (int i = 0; i < inputJson.notes.Length; i++)
         {
