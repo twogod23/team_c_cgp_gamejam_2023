@@ -587,7 +587,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 352295685}
-  - component: {fileID: 352295684}
   - component: {fileID: 352295686}
   m_Layer: 0
   m_Name: NotesManager
@@ -596,25 +595,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &352295684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 352295683}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90fd74754e15f3044b1199e704158909, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  noteNum: 0
-  LaneNum: 
-  NoteType: 
-  NotesTime: []
-  NotesObj: []
-  NotesSpeed: 8
-  noteObj: {fileID: 1962226539517612752, guid: 9e2bf876ae81499479658be660145428, type: 3}
 --- !u!4 &352295685
 Transform:
   m_ObjectHideFlags: 0
@@ -642,6 +622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbead082d1912764b8c35a8c19fb6605, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  songName: kiminojuusei-normal
   noteNum: 0
   LaneNum: 
   NoteType: 
