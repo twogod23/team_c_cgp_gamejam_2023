@@ -623,6 +623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbead082d1912764b8c35a8c19fb6605, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  songName: kiminojuusei-normal
   noteNum: 0
   LaneNum: 
   NoteType: 

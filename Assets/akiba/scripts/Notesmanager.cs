@@ -11,7 +11,9 @@ public class Data1
     public int offset;
     public Notes[] notes;
 
+
 }
+
 [Serializable]
 public class Notes
 {
@@ -23,8 +25,8 @@ public class Notes
 
 public class Notesmanager : MonoBehaviour
 {
+    [SerializeField] private string songName; // Unity InspectorでsongNameを指定するためのシリアライズフィールド
     public int noteNum;
-    private string songName;
 
     public List<int> LaneNum = new List<int>();
     public List<int> NoteType = new List<int>();
@@ -32,22 +34,22 @@ public class Notesmanager : MonoBehaviour
     public List<GameObject> NotesObj = new List<GameObject>();
 
     [SerializeField] private float NotesSpeed;
-    [SerializeField] GameObject noteObj;
+    [SerializeField] private GameObject noteObj;
 
     void OnEnable()
     {
         noteNum = 0;
-        songName = "kiminojuusei-normal";
         Load(songName);
     }
 
-    private void Load(string SongName)
+    private void Load(string songName)
     {
-        string inputString = Resources.Load<TextAsset>(SongName).ToString();
+        string inputString = Resources.Load<TextAsset>(songName).ToString();
         Data1 inputJson = JsonUtility.FromJson<Data1>(inputString);
 
         noteNum = inputJson.notes.Length;
         GManager.maxScore = noteNum * 5;//new
+
 
         for (int i = 0; i < inputJson.notes.Length; i++)
         {
@@ -60,7 +62,7 @@ public class Notesmanager : MonoBehaviour
 
             float z = NotesTime[i] * NotesSpeed;
             float notePos = 0;
-            
+
             if (inputJson.notes[i].block == 4)
             {
                 notePos = 1.5f;
