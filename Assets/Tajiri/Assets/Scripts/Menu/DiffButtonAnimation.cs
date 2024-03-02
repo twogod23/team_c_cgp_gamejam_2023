@@ -5,9 +5,11 @@ using UnityEngine;
 public class DiffButtonAnimation : MonoBehaviour
 {
     public GameObject diffButtons;
-    public Animation animation;
+    public Animation slideAnimation;
+    public string animationName;
     public void diffAnimation()
     {
-        animation.Play();
+        slideAnimation[animationName].time = 0;
+        slideAnimation.Play();
     }
 }

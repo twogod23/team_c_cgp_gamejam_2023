@@ -271,6 +271,8 @@ GameObject:
   - component: {fileID: 49142060}
   - component: {fileID: 49142059}
   - component: {fileID: 49142058}
+  - component: {fileID: 49142062}
+  - component: {fileID: 49142061}
   m_Layer: 5
   m_Name: HardButton
   m_TagString: Untagged
@@ -389,6 +391,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 49142061}
+        m_TargetAssemblyTypeName: DiffButtonAnimation, Assembly-CSharp
+        m_MethodName: diffAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &49142059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -427,6 +441,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 49142055}
   m_CullTransparentMesh: 1
+--- !u!114 &49142061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49142055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8e25a94cd08f0c449a948ff9b2f09c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diffButtons: {fileID: 49142055}
+  slideAnimation: {fileID: 49142062}
+  animationName: Buttonhopping
+--- !u!111 &49142062
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49142055}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 471540fe84913074da899605491efeef, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 471540fe84913074da899605491efeef, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &59835079
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,7 +611,7 @@ GameObject:
   - component: {fileID: 143990641}
   - component: {fileID: 143990642}
   m_Layer: 0
-  m_Name: SE(SongSelect)
+  m_Name: SE(DifficultySelect)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -599,8 +644,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eadd55cfd0c42a499749a38f568beba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: e3292c0c9083bd54388b94b8cf817250, type: 3}
-  AudioSourceObject: {fileID: 1598986856}
+  audioClip: {fileID: 8300000, guid: 1ea1a1d422447ac43abeac20aeccdd9f, type: 3}
+  AudioSourceObject: {fileID: 2016927521}
 --- !u!1 &201454695
 GameObject:
   m_ObjectHideFlags: 0
@@ -613,6 +658,8 @@ GameObject:
   - component: {fileID: 201454700}
   - component: {fileID: 201454699}
   - component: {fileID: 201454698}
+  - component: {fileID: 201454701}
+  - component: {fileID: 201454702}
   m_Layer: 5
   m_Name: EasyButton
   m_TagString: Untagged
@@ -731,6 +778,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 201454702}
+        m_TargetAssemblyTypeName: DiffButtonAnimation, Assembly-CSharp
+        m_MethodName: diffAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &201454699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -769,6 +828,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 201454695}
   m_CullTransparentMesh: 1
+--- !u!111 &201454701
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201454695}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 471540fe84913074da899605491efeef, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 471540fe84913074da899605491efeef, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!114 &201454702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201454695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8e25a94cd08f0c449a948ff9b2f09c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diffButtons: {fileID: 201454695}
+  slideAnimation: {fileID: 201454701}
+  animationName: Buttonhopping
 --- !u!1 &463187805
 GameObject:
   m_ObjectHideFlags: 0
@@ -798,8 +888,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 143990641}
   - {fileID: 585158771}
+  - {fileID: 143990641}
   - {fileID: 1705593387}
   m_Father: {fileID: 1141148695}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -848,7 +938,7 @@ GameObject:
   - component: {fileID: 585158771}
   - component: {fileID: 585158772}
   m_Layer: 0
-  m_Name: SE(DifficultySelect)
+  m_Name: SE(SongSelect)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -881,8 +971,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eadd55cfd0c42a499749a38f568beba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 0}
-  AudioSourceObject: {fileID: 1598986856}
+  audioClip: {fileID: 8300000, guid: 1ea1a1d422447ac43abeac20aeccdd9f, type: 3}
+  AudioSourceObject: {fileID: 2016927521}
 --- !u!1 &585763463
 GameObject:
   m_ObjectHideFlags: 0
@@ -954,12 +1044,13 @@ RectTransform:
   m_GameObject: {fileID: 604593315}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.91, y: 0.91, z: 0.91}
+  m_LocalScale: {x: 0.88, y: 0.88, z: 0.88}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 201454696}
   - {fileID: 1026648184}
   - {fileID: 49142056}
+  - {fileID: 1801966067}
   m_Father: {fileID: 1609963311}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1116,8 +1207,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 644931307}
+  - component: {fileID: 644931309}
+  - component: {fileID: 644931308}
   m_Layer: 5
-  m_Name: SongSlectButtons
+  m_Name: SongSelectButtons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1141,9 +1234,51 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 14.63, y: 0}
+  m_AnchoredPosition: {x: 226.5, y: 162}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!111 &644931308
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 644931306}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: cbc25d05ce9974f4c8c876b9d92eb29f, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: cbc25d05ce9974f4c8c876b9d92eb29f, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!114 &644931309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 644931306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_Spacing: 84
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1 &645081379
 GameObject:
   m_ObjectHideFlags: 0
@@ -1155,7 +1290,7 @@ GameObject:
   - component: {fileID: 645081380}
   - component: {fileID: 645081381}
   m_Layer: 0
-  m_Name: shiningstar
+  m_Name: Kiritorisen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1189,10 +1324,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetText: {fileID: 1592258324}
-  newText: "\u30B7\u30E3\u30A4\u30CB\u30F3\u30B0\u30B9\u30BF\u30FC"
+  newText: "\u5207/\u308A/\u53D6/\u308A/\u7DDA"
   targetImage: {fileID: 757963403}
   newSprite: {fileID: 21300000, guid: f35e2d1b9f012614bbdf4583ae35e449, type: 3}
-  SongName: maou_short_14_shining_star
+  SongName: Kiritorisen
   musicPlay: {fileID: 1133445550}
   AudioSourceObject: {fileID: 1598986856}
   easyButton: {fileID: 1863932346}
@@ -1200,11 +1335,14 @@ MonoBehaviour:
   hardButton: {fileID: 1246294617}
   buttonSceneChange: {fileID: 609066325}
   diffButtonAnimation: {fileID: 1278493747}
+  songNameAnimation: {fileID: 1285001527}
+  jacketAnimation: {fileID: 1178632526}
   imageSwitcherEasy: {fileID: 1863932348}
   imageSwitcherNormal: {fileID: 1344034987}
   imageSwitcherHard: {fileID: 1246294619}
   playButton: {fileID: 609066326}
   variableMemory: {fileID: 59835082}
+  startTime: 19
 --- !u!1 &691379721
 GameObject:
   m_ObjectHideFlags: 0
@@ -1251,6 +1389,7 @@ GameObject:
   - component: {fileID: 757963404}
   - component: {fileID: 757963403}
   - component: {fileID: 757963405}
+  - component: {fileID: 757963406}
   m_Layer: 5
   m_Name: Jacket
   m_TagString: Untagged
@@ -1265,16 +1404,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 757963401}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1213.9225}
   m_LocalScale: {x: 4.9, y: 4.9, z: 4.9}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1221662484}
+  m_Father: {fileID: 1076803359}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -484, y: 147}
+  m_AnchoredPosition: {x: -705.52057, y: -74.92517}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &757963403
@@ -1330,6 +1469,22 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0.5399337, b: 1, a: 0.5}
   m_EffectDistance: {x: 4.41, y: -4.47}
   m_UseGraphicAlpha: 0
+--- !u!111 &757963406
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757963401}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: a4bf10387609d55449bfc78a432e6b7f, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: a4bf10387609d55449bfc78a432e6b7f, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &791992827
 GameObject:
   m_ObjectHideFlags: 0
@@ -1583,6 +1738,8 @@ GameObject:
   - component: {fileID: 1026648188}
   - component: {fileID: 1026648187}
   - component: {fileID: 1026648186}
+  - component: {fileID: 1026648190}
+  - component: {fileID: 1026648189}
   m_Layer: 5
   m_Name: NormalButton
   m_TagString: Untagged
@@ -1701,6 +1858,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1026648190}
+        m_TargetAssemblyTypeName: DiffButtonAnimation, Assembly-CSharp
+        m_MethodName: diffAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1026648187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1739,6 +1908,72 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1026648183}
   m_CullTransparentMesh: 1
+--- !u!111 &1026648189
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026648183}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 471540fe84913074da899605491efeef, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 471540fe84913074da899605491efeef, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!114 &1026648190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026648183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8e25a94cd08f0c449a948ff9b2f09c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diffButtons: {fileID: 1026648183}
+  slideAnimation: {fileID: 1026648189}
+  animationName: Buttonhopping
+--- !u!1 &1076803358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1076803359}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1076803359
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1076803358}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 221.52057, y: 221.92517, z: -1213.9225}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 1106043272}
+  - {fileID: 757963402}
+  - {fileID: 1592258323}
+  - {fileID: 1609963311}
+  m_Father: {fileID: 1221662484}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1100689575
 GameObject:
   m_ObjectHideFlags: 0
@@ -1752,7 +1987,7 @@ GameObject:
   - component: {fileID: 1100689579}
   - component: {fileID: 1100689578}
   m_Layer: 5
-  m_Name: shiningstar_Play
+  m_Name: Kiritorisen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1772,9 +2007,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 644931307}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 241, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1100689578
@@ -1833,6 +2068,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 585158772}
+        m_TargetAssemblyTypeName: SoundEffect, Assembly-CSharp
+        m_MethodName: PlaySE
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1100689579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1853,7 +2100,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b330ae0c022bba7489d17bddbe2a772a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2837e73709226fd4280681781623c685, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1896,16 +2143,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1106043271}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1213.9225}
   m_LocalScale: {x: 19.2, y: 10.799999, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1221662484}
+  m_Father: {fileID: 1076803359}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0, y: 0}
+  m_AnchoredPosition: {x: -221.52057, y: -221.92517}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1106043273
@@ -1977,6 +2224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameSong: None
   AudioSourceObject: {fileID: 1598986856}
+  startTime: 0
 --- !u!4 &1133445551
 Transform:
   m_ObjectHideFlags: 0
@@ -2022,6 +2270,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1598986858}
+  - {fileID: 2016927523}
   - {fileID: 59835080}
   - {fileID: 1895986037}
   - {fileID: 1217109039}
@@ -2031,6 +2280,53 @@ Transform:
   - {fileID: 463187806}
   - {fileID: 1786732404}
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1178632525
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1178632527}
+  - component: {fileID: 1178632526}
+  m_Layer: 0
+  m_Name: JacketAnimation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1178632526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178632525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8e25a94cd08f0c449a948ff9b2f09c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diffButtons: {fileID: 757963401}
+  slideAnimation: {fileID: 757963406}
+  animationName: Jacketanim
+--- !u!4 &1178632527
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178632525}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1217109039}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1217109038
 GameObject:
@@ -2062,6 +2358,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1278493746}
+  - {fileID: 1285001526}
+  - {fileID: 1178632527}
   m_Father: {fileID: 1141148695}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1221662480
@@ -2158,10 +2456,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1106043272}
-  - {fileID: 757963402}
-  - {fileID: 1592258323}
-  - {fileID: 1609963311}
+  - {fileID: 1076803359}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2280,7 +2575,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   diffButtons: {fileID: 604593315}
-  animation: {fileID: 604593318}
+  slideAnimation: {fileID: 604593318}
+  animationName: Diff
+--- !u!1 &1285001525
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1285001526}
+  - component: {fileID: 1285001527}
+  m_Layer: 0
+  m_Name: SongNameAnimation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1285001526
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285001525}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1217109039}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1285001527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285001525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8e25a94cd08f0c449a948ff9b2f09c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diffButtons: {fileID: 1592258322}
+  slideAnimation: {fileID: 1592258326}
+  animationName: SongNameanim
 --- !u!1 &1344034984
 GameObject:
   m_ObjectHideFlags: 0
@@ -2452,6 +2795,7 @@ GameObject:
   - component: {fileID: 1592258323}
   - component: {fileID: 1592258325}
   - component: {fileID: 1592258324}
+  - component: {fileID: 1592258326}
   m_Layer: 5
   m_Name: SongName
   m_TagString: Untagged
@@ -2466,16 +2810,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1592258322}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1213.9225}
   m_LocalScale: {x: 1.84, y: 1.84, z: 1.84}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1221662484}
+  m_Father: {fileID: 1076803359}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -482.23, y: -286}
+  m_AnchoredPosition: {x: -703.7506, y: -507.92517}
   m_SizeDelta: {x: 428.2, y: 79.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1592258324
@@ -2575,6 +2919,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1592258322}
   m_CullTransparentMesh: 1
+--- !u!111 &1592258326
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592258322}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 9c446ce16ac21e2438ef2d68d44e1643, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 9c446ce16ac21e2438ef2d68d44e1643, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1598986856
 GameObject:
   m_ObjectHideFlags: 0
@@ -2604,7 +2964,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.204
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2726,21 +3086,20 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1609963310}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1213.9225}
   m_LocalScale: {x: 1.9, y: 1.9, z: 1.9}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 644931307}
   - {fileID: 604593316}
   - {fileID: 791992828}
-  - {fileID: 1801966067}
   - {fileID: 39076024}
-  m_Father: {fileID: 1221662484}
+  m_Father: {fileID: 1076803359}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -221.52057, y: -221.92517}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1673862819
@@ -2754,7 +3113,7 @@ GameObject:
   - component: {fileID: 1673862820}
   - component: {fileID: 1673862821}
   m_Layer: 0
-  m_Name: kimi_no_jusei
+  m_Name: Kiminojuusei
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2791,7 +3150,7 @@ MonoBehaviour:
   newText: "\u541B\u306E\u9283\u58F0"
   targetImage: {fileID: 757963403}
   newSprite: {fileID: 21300000, guid: 0bbaa3c0ab466bd4b9f8280a13042dbc, type: 3}
-  SongName: kimi_no_jusei
+  SongName: Kiminojuusei
   musicPlay: {fileID: 1133445550}
   AudioSourceObject: {fileID: 1598986856}
   easyButton: {fileID: 1863932346}
@@ -2799,11 +3158,14 @@ MonoBehaviour:
   hardButton: {fileID: 1246294617}
   buttonSceneChange: {fileID: 609066325}
   diffButtonAnimation: {fileID: 1278493747}
+  songNameAnimation: {fileID: 1285001527}
+  jacketAnimation: {fileID: 1178632526}
   imageSwitcherEasy: {fileID: 1863932348}
   imageSwitcherNormal: {fileID: 1344034987}
   imageSwitcherHard: {fileID: 1246294619}
   playButton: {fileID: 609066326}
   variableMemory: {fileID: 59835082}
+  startTime: 62
 --- !u!1 &1705593386
 GameObject:
   m_ObjectHideFlags: 0
@@ -2848,8 +3210,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eadd55cfd0c42a499749a38f568beba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 0}
-  AudioSourceObject: {fileID: 1598986856}
+  audioClip: {fileID: 8300000, guid: 68018d4e6250f0044b4b59c2c3519b6d, type: 3}
+  AudioSourceObject: {fileID: 2016927521}
 --- !u!1 &1786732403
 GameObject:
   m_ObjectHideFlags: 0
@@ -2923,14 +3285,14 @@ RectTransform:
   m_GameObject: {fileID: 1801966066}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.01, y: 2.01, z: 2.01}
+  m_LocalScale: {x: 2.208791, y: 2.208791, z: 2.208791}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1609963311}
+  m_Father: {fileID: 604593316}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 443.9, y: -204.6}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 27.6, y: 28.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1801966069
@@ -3152,7 +3514,7 @@ GameObject:
   - component: {fileID: 2000648840}
   - component: {fileID: 2000648839}
   m_Layer: 5
-  m_Name: Kimi_no_jusei_Play
+  m_Name: Kiminojuusei
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3172,9 +3534,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 644931307}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 241, y: 197}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2000648839
@@ -3233,6 +3595,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 585158772}
+        m_TargetAssemblyTypeName: SoundEffect, Assembly-CSharp
+        m_MethodName: PlaySE
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2000648840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3271,6 +3645,134 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2000648837}
   m_CullTransparentMesh: 1
+--- !u!1 &2016927521
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2016927523}
+  - component: {fileID: 2016927522}
+  m_Layer: 0
+  m_Name: AudioSource(SE)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &2016927522
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016927521}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.05
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &2016927523
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016927521}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1141148695}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
