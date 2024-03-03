@@ -10,8 +10,6 @@ public class Data1
     public int BPM;
     public int offset;
     public Notes[] notes;
-
-
 }
 
 [Serializable]
@@ -49,6 +47,7 @@ public class Notesmanager : MonoBehaviour
 
         noteNum = inputJson.notes.Length;
         GManager.maxScore = noteNum * 5;//new
+
 
 
         for (int i = 0; i < inputJson.notes.Length; i++)
