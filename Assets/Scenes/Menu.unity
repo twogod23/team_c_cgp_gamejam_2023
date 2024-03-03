@@ -149,15 +149,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 39076023}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1213.9225}
+  m_LocalScale: {x: 1.9, y: 1.9, z: 1.9}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1609963311}
+  m_Father: {fileID: 1076803359}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 261.14}
+  m_AnchoredPosition: {x: -221.52051, y: 274.24084}
   m_SizeDelta: {x: 900.5, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &39076026
@@ -859,6 +859,81 @@ MonoBehaviour:
   diffButtons: {fileID: 201454695}
   slideAnimation: {fileID: 201454701}
   animationName: Buttonhopping
+--- !u!1 &241540356
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 241540357}
+  - component: {fileID: 241540359}
+  - component: {fileID: 241540358}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &241540357
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241540356}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1221662484}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &241540358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241540356}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &241540359
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241540356}
+  m_CullTransparentMesh: 1
 --- !u!1 &463187805
 GameObject:
   m_ObjectHideFlags: 0
@@ -1109,7 +1184,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 609066324}
-  - component: {fileID: 609066325}
   - component: {fileID: 609066326}
   m_Layer: 0
   m_Name: PlayButtonSystem
@@ -1133,22 +1207,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 506157856}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &609066325
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 609066323}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf96bf7e91649854fbb9603afc35c312, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: 
-  sceneChanger: {fileID: 585763464}
-  errormessage: "\u96E3\u6613\u5EA6\u3092\u9078\u629E\u3057\u3066\u304F\u3060\u3055\u3044"
-  errorText: {fileID: 1895986036}
 --- !u!114 &609066326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1333,7 +1391,7 @@ MonoBehaviour:
   easyButton: {fileID: 1863932346}
   normalButton: {fileID: 1344034985}
   hardButton: {fileID: 1246294617}
-  buttonSceneChange: {fileID: 609066325}
+  fadeOutLoader: {fileID: 760241204}
   diffButtonAnimation: {fileID: 1278493747}
   songNameAnimation: {fileID: 1285001527}
   jacketAnimation: {fileID: 1178632526}
@@ -1343,6 +1401,7 @@ MonoBehaviour:
   playButton: {fileID: 609066326}
   variableMemory: {fileID: 59835082}
   startTime: 19
+  musicFadeOut: {fileID: 1964496542}
 --- !u!1 &691379721
 GameObject:
   m_ObjectHideFlags: 0
@@ -1485,6 +1544,57 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!1 &760241202
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 760241203}
+  - component: {fileID: 760241204}
+  m_Layer: 0
+  m_Name: FadeOut
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &760241203
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760241202}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 979.7433, y: 548.28485, z: -1081.1165}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1141148695}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &760241204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760241202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14603e28a3d3f754987c5c2e12b55f4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadePanel: {fileID: 241540358}
+  fadeDuration: 1
+  sceneChanger: {fileID: 585763464}
+  errorText: {fileID: 1895986036}
+  sceneName: 
+  errormessage: "\u96E3\u6613\u5EA6\u3092\u9078\u629E\u3057\u3066\u304F\u3060\u3055\u3044"
+  musicFadeOut: {fileID: 1964496542}
 --- !u!1 &791992827
 GameObject:
   m_ObjectHideFlags: 0
@@ -1971,6 +2081,7 @@ Transform:
   - {fileID: 1106043272}
   - {fileID: 757963402}
   - {fileID: 1592258323}
+  - {fileID: 39076024}
   - {fileID: 1609963311}
   m_Father: {fileID: 1221662484}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2279,6 +2390,8 @@ Transform:
   - {fileID: 1133445551}
   - {fileID: 463187806}
   - {fileID: 1786732404}
+  - {fileID: 1964496541}
+  - {fileID: 760241203}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1178632525
@@ -2457,6 +2570,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1076803359}
+  - {fileID: 241540357}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2496,7 +2610,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneName: 
   difficulty: Hard
-  playButton: {fileID: 609066325}
+  fadeOutLoader: {fileID: 760241204}
 --- !u!4 &1246294618
 Transform:
   m_ObjectHideFlags: 0
@@ -2656,7 +2770,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneName: 
   difficulty: Normal
-  playButton: {fileID: 609066325}
+  fadeOutLoader: {fileID: 760241204}
 --- !u!4 &1344034986
 Transform:
   m_ObjectHideFlags: 0
@@ -2964,7 +3078,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.2
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3094,7 +3208,6 @@ RectTransform:
   - {fileID: 644931307}
   - {fileID: 604593316}
   - {fileID: 791992828}
-  - {fileID: 39076024}
   m_Father: {fileID: 1076803359}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -3156,7 +3269,7 @@ MonoBehaviour:
   easyButton: {fileID: 1863932346}
   normalButton: {fileID: 1344034985}
   hardButton: {fileID: 1246294617}
-  buttonSceneChange: {fileID: 609066325}
+  fadeOutLoader: {fileID: 760241204}
   diffButtonAnimation: {fileID: 1278493747}
   songNameAnimation: {fileID: 1285001527}
   jacketAnimation: {fileID: 1178632526}
@@ -3166,6 +3279,7 @@ MonoBehaviour:
   playButton: {fileID: 609066326}
   variableMemory: {fileID: 59835082}
   startTime: 62
+  musicFadeOut: {fileID: 1964496542}
 --- !u!1 &1705593386
 GameObject:
   m_ObjectHideFlags: 0
@@ -3339,9 +3453,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 609066325}
-        m_TargetAssemblyTypeName: ButtonSceneChange, Assembly-CSharp
-        m_MethodName: ButtonClick
+      - m_Target: {fileID: 760241204}
+        m_TargetAssemblyTypeName: FadeOutLoader, Assembly-CSharp
+        m_MethodName: startFadeOut
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3421,7 +3535,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneName: 
   difficulty: Easy
-  playButton: {fileID: 609066325}
+  fadeOutLoader: {fileID: 760241204}
 --- !u!4 &1863932347
 Transform:
   m_ObjectHideFlags: 0
@@ -3501,6 +3615,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1141148695}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1964496540
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1964496541}
+  - component: {fileID: 1964496542}
+  m_Layer: 0
+  m_Name: MusicFadeInFadeOut
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1964496541
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964496540}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 979.7433, y: 548.28485, z: -1081.1165}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1141148695}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1964496542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964496540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c4454f357c31f04c9279505acfa157d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeInDuration: 1
+  fadeOutDuration: 3
+  audioSource: {fileID: 1598986857}
 --- !u!1 &2000648837
 GameObject:
   m_ObjectHideFlags: 0
@@ -3674,7 +3835,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.05
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0

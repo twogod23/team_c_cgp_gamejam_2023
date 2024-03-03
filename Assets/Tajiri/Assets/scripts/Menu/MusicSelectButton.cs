@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class MusicSelectButton : MonoBehaviour
+public class MusicSelectButton : MonoBehaviour//privateにすべきところもpublicに
 {
     public TextMeshProUGUI targetText;
     public string newText; //曲名
@@ -18,7 +18,7 @@ public class MusicSelectButton : MonoBehaviour
     public diffButton easyButton; //各難易度のボタンを更新するため
     public diffButton normalButton;
     public diffButton hardButton;
-    public ButtonSceneChange buttonSceneChange;
+    public FadeOutLoader fadeOutLoader;//画面フェードアウト
     public DiffButtonAnimation diffButtonAnimation;//難易度ボタンのスライドアニメーション
     public DiffButtonAnimation songNameAnimation;//曲名のアニメーション(流用)
     public DiffButtonAnimation jacketAnimation;//ジャケットのアニメーション(流用)
@@ -26,14 +26,17 @@ public class MusicSelectButton : MonoBehaviour
     public ImageSwitcher imageSwitcherNormal;
     public ImageSwitcher imageSwitcherHard;
 
+    //ここから
     [SerializeField] private PlayButton playButton;
     [SerializeField] private VariableMemory variableMemory;
     [Header("ここから再生(サビ)")] public float startTime;
+    [SerializeField] private MusicFadeOut musicFadeOut;//音楽のフェードアウト(インも)
+
 
 
     public void onClick()
     {
-        buttonSceneChange.sceneName = null;
+        fadeOutLoader.sceneName = null;
         changeText();
         changeImage();
         musicPlay.startTime = startTime;
@@ -73,6 +76,7 @@ public class MusicSelectButton : MonoBehaviour
             audioSource.Stop();
             musicPlay.nameSong = SongName;
             musicPlay.PlayMusic();
+            musicFadeOut.StartFadeIn();
         }
     }
 }
