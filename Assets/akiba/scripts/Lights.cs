@@ -12,6 +12,7 @@ public class Lights : MonoBehaviour
     void Start()
     {
         rend = GetComponent<Renderer>();
+        rend.material.color = new Color(rend.material.color.r,rend.material.color.g,rend.material.color.b,alfa);
     }
 
     // Update is called once per frame
