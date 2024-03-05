@@ -86,7 +86,7 @@ public class Judge : MonoBehaviour
             if (Time.time > endTime + GManager.StartTime)
             {
                 finish.SetActive(true);
-                //Invoke("ResultScene", 3f);動画の後半でコメントを外してください
+                Invoke("ResultScene", 3f);動画の後半でコメントを外してください
                 return;
             }
 
