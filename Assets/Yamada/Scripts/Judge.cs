@@ -86,7 +86,7 @@ public class Judge : MonoBehaviour
             if (Time.time > endTime + GManager.StartTime)
             {
                 finish.SetActive(true);
-                //Invoke("ResultScene", 3f);動画の後半でコメントを外してください
+                Invoke("ResultScene", 3f);
                 return;
             }
 
@@ -162,11 +162,21 @@ public class Judge : MonoBehaviour
 
     void message(int judge)//判定を表示する
     {
-        Instantiate(MessageObj[judge],new Vector3(notesmanager.LaneNum[0]-1.5f,0.76f,0.15f),Quaternion.Euler(45,0,0));
+        float pos;
+
+        if (notesmanager.LaneNum[0] == 4)
+        {
+            pos = 1.5f;
+        }
+        else
+        {
+            pos = notesmanager.LaneNum[0];
+        }
+        Instantiate(MessageObj[judge],new Vector3(pos-1.5f,0.76f,0.15f),Quaternion.Euler(45,0,0));
     }
 
     void ResultScene()
     {
-        SceneManager.LoadScene("Result");
+        SceneManager.LoadScene("ResultScene");
     }
 }
