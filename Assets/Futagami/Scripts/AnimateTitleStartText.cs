@@ -22,10 +22,6 @@ public class AnimateTitleStartText : MonoBehaviour
     [SerializeField] private GameObject optionButton;
 
     // Start is called before the first frame update
-    void awake()
-    {
-        
-    }
     void Start()
     {
         
