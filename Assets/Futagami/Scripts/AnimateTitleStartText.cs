@@ -20,11 +20,15 @@ public class AnimateTitleStartText : MonoBehaviour
 
     //設定ボタンの指定
     [SerializeField] private GameObject optionButton;
+    private float timer = 0.0f;
+    [SerializeField] private GameObject fadePanel;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip audioClip;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        fadePanel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -45,6 +49,17 @@ public class AnimateTitleStartText : MonoBehaviour
         {
             Select();
         }
+
+        if (informationTMP.enabled == false)
+        {
+            timer += Time.deltaTime / 2;
+            fadePanel.GetComponent<Image>().color = new Color(0, 0, 0, timer);
+            if (timer >= 1.0f)
+            {
+                //ゲームシーンに移動
+                SceneManager.LoadScene(nextSceneName);
+            }
+        }
     }
 
     //シーン遷移の挙動
@@ -54,8 +69,9 @@ public class AnimateTitleStartText : MonoBehaviour
         informationTMP.enabled = false;
         //設定ボタンの非表示
         optionButton.SetActive(false);
-
-        //ゲームシーンに移動
-        SceneManager.LoadScene(nextSceneName);
+        //フェードパネルの表示
+        fadePanel.SetActive(true);
+        //音楽の再生
+        audioSource.PlayOneShot(audioClip);
     }
 }

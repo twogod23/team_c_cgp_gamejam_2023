@@ -10,11 +10,10 @@ public class Pause : MonoBehaviour
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private Button resumeButton;
     
-    public GameObject targetobject;
+    public GameObject audiotargetobject;
     public TextMeshProUGUI CountText;
     AudioSource audioSource;
     float delay = 1.0f;
-    int CountText2 = 3;
 
 
     void Start()
@@ -23,7 +22,7 @@ public class Pause : MonoBehaviour
         pausePanel.SetActive(false);
         pauseButton.onClick.AddListener(PauseGame);
         resumeButton.onClick.AddListener(ResumeButtonClick); 
-        audioSource = targetobject.GetComponent<AudioSource>();
+        audioSource = audiotargetobject.GetComponent<AudioSource>();
     }
 
     void Update()
@@ -59,14 +58,16 @@ public class Pause : MonoBehaviour
 
     IEnumerator Coroutine()
     {
-        yield return new WaitForSecondsRealtime(delay);
-        CountText2 -= 1;
-        CountText.text = CountText2.ToString();
-        yield return new WaitForSecondsRealtime(delay);
-        CountText2 -= 1;
-        CountText.text = CountText2.ToString();
-        yield return new WaitForSecondsRealtime(delay);
-        ResumeGame();
+        for (int i = 3; i > 0; i--)
+        {
+            if (pausePanel.activeSelf == true)
+            {
+                yield break;
+            }
+            CountText.text = i.ToString();
+            yield return new WaitForSecondsRealtime(delay);
+        }
         CountText.gameObject.SetActive(false);
+        ResumeGame();
     }
 }
