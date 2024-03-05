@@ -10,11 +10,13 @@ public class DisplayOption : MonoBehaviour
     //ConfigCaptureのスクリプトを取得
     [SerializeField] private GameObject Director;
     private ConfigCapture conCap;
+    private VolumeControler volumeControler;
 
     // Start is called before the first frame update
     void Start()
     {
         conCap = Director.GetComponent<ConfigCapture>();
+        volumeControler = Director.GetComponent<VolumeControler>();
 
         optionPanel.SetActive(false);
         foreach (var obj in hideObjects)
@@ -48,5 +50,7 @@ public class DisplayOption : MonoBehaviour
                 obj.SetActive(true);
             }
         }
+        volumeControler.SetBGMVolume();
+        volumeControler.SetSEVolume();
     }
 }
