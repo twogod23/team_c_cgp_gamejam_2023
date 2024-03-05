@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -427,7 +427,7 @@ MonoBehaviour:
   textColorScale: 1.2
   informationTMP: {fileID: 556710325}
   nextSceneName: Menu
-  optionButton: {fileID: 0}
+  optionButton: {fileID: 610548876}
 --- !u!114 &556710325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -659,6 +659,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 601020088}
   m_CullTransparentMesh: 1
+--- !u!1 &610548876 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3056934507987731561, guid: f87c2099902a7c84eb67e3a94dffbfc8, type: 3}
+  m_PrefabInstance: {fileID: 528480622}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &717920499
 GameObject:
   m_ObjectHideFlags: 0
