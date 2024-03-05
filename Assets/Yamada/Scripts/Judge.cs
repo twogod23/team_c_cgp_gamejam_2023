@@ -83,10 +83,25 @@ public class Judge : MonoBehaviour
                 }
             }
 
+            if (Input.GetKeyDown(KeyCode.Space))//〇キーが押されたとき
+            {
+                if (notesmanager.LaneNum[0] == 4)//押されたボタンはレーンの番号とあっているか？
+                {
+                    Judgement(GetABS(Time.time - (notesmanager.NotesTime[0] + GManager.StartTime)), 0);
+                }
+                else
+                {
+                    if (notesmanager.LaneNum[1] == 4)
+                    {
+                        Judgement(GetABS(Time.time - (notesmanager.NotesTime[1] + GManager.StartTime)), 1);
+                    }
+                }
+            }
+
             if (Time.time > endTime + GManager.StartTime)
             {
                 finish.SetActive(true);
-                //Invoke("ResultScene", 3f);動画の後半でコメントを外してください
+                Invoke("ResultScene", 3f);
                 return;
             }
 
@@ -162,11 +177,21 @@ public class Judge : MonoBehaviour
 
     void message(int judge)//判定を表示する
     {
-        Instantiate(MessageObj[judge],new Vector3(notesmanager.LaneNum[0]-1.5f,0.76f,0.15f),Quaternion.Euler(45,0,0));
+        float pos;
+
+        if (notesmanager.LaneNum[0] == 4)
+        {
+            pos = 1.5f;
+        }
+        else
+        {
+            pos = notesmanager.LaneNum[0];
+        }
+        Instantiate(MessageObj[judge],new Vector3(pos-1.5f,0.76f,0.15f),Quaternion.Euler(45,0,0));
     }
 
     void ResultScene()
     {
-        SceneManager.LoadScene("Result");
+        SceneManager.LoadScene("ResultScene");
     }
 }

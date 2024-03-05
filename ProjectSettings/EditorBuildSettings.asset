@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/TitleScene.unity
+    guid: 397cb0a3941d7824bb20d553065c97d1
+  - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 485e3ce1003898540b585d2996d39831
   - enabled: 1
@@ -20,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Tajiri/Assets/Scenes/maou_short_14_shining_star_Normal.unity
     guid: 7c472ba83ac76174a8262e6db86356ba
+  - enabled: 1
+    path: Assets/Scenes/ResultScene.unity
+    guid: 1a6a296ff4251584f8be08b403b7cf29
   m_configObjects: {}
