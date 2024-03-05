@@ -83,6 +83,21 @@ public class Judge : MonoBehaviour
                 }
             }
 
+            if (Input.GetKeyDown(KeyCode.Space))//〇キーが押されたとき
+            {
+                if (notesmanager.LaneNum[0] == 4)//押されたボタンはレーンの番号とあっているか？
+                {
+                    Judgement(GetABS(Time.time - (notesmanager.NotesTime[0] + GManager.StartTime)), 0);
+                }
+                else
+                {
+                    if (notesmanager.LaneNum[1] == 4)
+                    {
+                        Judgement(GetABS(Time.time - (notesmanager.NotesTime[1] + GManager.StartTime)), 1);
+                    }
+                }
+            }
+
             if (Time.time > endTime + GManager.StartTime)
             {
                 finish.SetActive(true);
