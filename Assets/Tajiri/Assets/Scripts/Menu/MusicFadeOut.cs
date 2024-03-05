@@ -7,7 +7,6 @@ public class MusicFadeOut : MonoBehaviour//Stopはしません
     [SerializeField] private float fadeInDuration = 2.0f;
     [SerializeField] private float fadeOutDuration = 2.0f;
     [SerializeField] private AudioSource audioSource;
-    private float maxVolume;
 
     public void StartFadeOut()
     {

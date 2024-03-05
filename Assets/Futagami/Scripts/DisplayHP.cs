@@ -6,7 +6,7 @@ using TMPro;
 public class DisplayHP : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI hpText;
-    public int gameHP = 0;
+    public int gameCombo = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +16,7 @@ public class DisplayHP : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        hpText.text = "HP  " + gameHP;
+        gameCombo = GManager.combo;
+        hpText.text = "Combo  " + gameCombo;
     }
 }
