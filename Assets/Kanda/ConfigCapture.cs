@@ -26,11 +26,13 @@ public class ConfigCapture : MonoBehaviour
 
     public float NewestBGMVolume()
     {
-        return PlayerPrefs.GetFloat("BGMVolume");
+        Debug.Log("readBGM" + PlayerPrefs.GetFloat("BGMVolume"));
+        return PlayerPrefs.GetFloat("BGMVolume", 0.5f);
     }
 
     public float NewestSEVolume()
     {
-        return PlayerPrefs.GetFloat("SEVolume");
+        Debug.Log("readSE" + PlayerPrefs.GetFloat("SEVolume"));
+        return PlayerPrefs.GetFloat("SEVolume", 0.5f);
     }
 }

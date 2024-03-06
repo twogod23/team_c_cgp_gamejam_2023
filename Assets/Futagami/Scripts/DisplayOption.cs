@@ -11,12 +11,14 @@ public class DisplayOption : MonoBehaviour
     [SerializeField] private GameObject Director;
     private ConfigCapture conCap;
     private VolumeControler volumeControler;
+    private SetVolume setVolume;
 
     // Start is called before the first frame update
     void Start()
     {
         conCap = Director.GetComponent<ConfigCapture>();
         volumeControler = Director.GetComponent<VolumeControler>();
+        setVolume = Director.GetComponent<SetVolume>();
 
         optionPanel.SetActive(false);
         foreach (var obj in hideObjects)
@@ -35,6 +37,8 @@ public class DisplayOption : MonoBehaviour
                 obj.SetActive(false);
             }
         }
+        setVolume.EnterBGMVolume();
+        setVolume.EnterSEVolume();
     }
 
     public void CloseOptionPanel()

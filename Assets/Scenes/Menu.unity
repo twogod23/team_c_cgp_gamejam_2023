@@ -2256,6 +2256,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -80
       objectReference: {fileID: 0}
+    - target: {fileID: 6821134869540674820, guid: 86431c1570632b442be1a8cc8cf13c6e, type: 3}
+      propertyPath: seObject
+      value: 
+      objectReference: {fileID: 2016927521}
+    - target: {fileID: 6821134869540674820, guid: 86431c1570632b442be1a8cc8cf13c6e, type: 3}
+      propertyPath: bgmObject
+      value: 
+      objectReference: {fileID: 1598986856}
     - target: {fileID: 9012250509784443231, guid: 86431c1570632b442be1a8cc8cf13c6e, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.5
@@ -2267,10 +2275,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 68181537367797265, guid: 86431c1570632b442be1a8cc8cf13c6e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2047517542}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86431c1570632b442be1a8cc8cf13c6e, type: 3}
 --- !u!1 &2000648837
 GameObject:
@@ -2559,26 +2564,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1141148695}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2047517537 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 68181537367797265, guid: 86431c1570632b442be1a8cc8cf13c6e, type: 3}
-  m_PrefabInstance: {fileID: 1972143579}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2047517542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2047517537}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f48a7ae59eadad44a904879d9ce39b25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bgmObject: {fileID: 1598986856}
-  seObject: {fileID: 2016927521}
-  Director: {fileID: 2047517537}
 --- !u!1 &2126693214
 GameObject:
   m_ObjectHideFlags: 0
