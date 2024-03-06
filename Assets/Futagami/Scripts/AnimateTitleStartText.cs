@@ -29,6 +29,7 @@ public class AnimateTitleStartText : MonoBehaviour
     void Start()
     {
         fadePanel.SetActive(false);
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame

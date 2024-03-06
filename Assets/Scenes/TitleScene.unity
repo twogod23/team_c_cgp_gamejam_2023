@@ -1360,21 +1360,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 68181537367797265, guid: 86431c1570632b442be1a8cc8cf13c6e, type: 3}
   m_PrefabInstance: {fileID: 3865802254120945426}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3056934507635670284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3056934507635670279}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f48a7ae59eadad44a904879d9ce39b25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bgmObject: {fileID: 0}
-  seObject: {fileID: 1588477533}
-  Director: {fileID: 3056934507635670279}
 --- !u!1001 &3865802254120945426
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1459,6 +1444,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6821134869540674820, guid: 86431c1570632b442be1a8cc8cf13c6e, type: 3}
+      propertyPath: seObject
+      value: 
+      objectReference: {fileID: 1588477533}
+    - target: {fileID: 8901501523195767231, guid: 86431c1570632b442be1a8cc8cf13c6e, type: 3}
+      propertyPath: hideObjects.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8901501523195767231, guid: 86431c1570632b442be1a8cc8cf13c6e, type: 3}
       propertyPath: hideObjects.Array.data[0]
       value: 
@@ -1474,10 +1467,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 68181537367797265, guid: 86431c1570632b442be1a8cc8cf13c6e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3056934507635670284}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86431c1570632b442be1a8cc8cf13c6e, type: 3}
 --- !u!1001 &6073162722594007927
 PrefabInstance:

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8901501523195767231}
   - component: {fileID: 5547678016320030339}
   - component: {fileID: 7686539628791966890}
+  - component: {fileID: 6821134869540674820}
   m_Layer: 0
   m_Name: Option 1
   m_TagString: Untagged
@@ -81,6 +82,21 @@ MonoBehaviour:
   seSlider: {fileID: 1415215681455587331}
   bgmVolume: 0.5
   seVolume: 0.5
+  Director: {fileID: 68181537367797265}
+--- !u!114 &6821134869540674820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68181537367797265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f48a7ae59eadad44a904879d9ce39b25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgmObject: {fileID: 0}
+  seObject: {fileID: 0}
   Director: {fileID: 68181537367797265}
 --- !u!1 &6957314800319702651
 GameObject:
@@ -249,6 +265,10 @@ PrefabInstance:
     - target: {fileID: 2158820483269411776, guid: 2bddfaca5fb698642aa44fe31e8661bc, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4422024783481290493, guid: 2bddfaca5fb698642aa44fe31e8661bc, type: 3}
+      propertyPath: m_Value
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5493199299175283314, guid: 2bddfaca5fb698642aa44fe31e8661bc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

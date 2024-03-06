@@ -39,4 +39,14 @@ public class SetVolume : MonoBehaviour
     {
         seVolume = seSlider.value;
     }
+
+    public void EnterBGMVolume()
+    {
+        bgmSlider.value = bgmVolume;
+    }
+
+    public void EnterSEVolume()
+    {
+        seSlider.value = seVolume;
+    }
 }
